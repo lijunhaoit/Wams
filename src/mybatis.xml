@@ -3,6 +3,6 @@
 <configuration>   
  <!-- 别名 -->   
   <typeAliases>  
-       <typeAlias type="com.huawei.wams.core.entity.Account" alias="account"/>  
+       <typeAlias type="com.jihan.wams.core.entity.Account" alias="account"/>  
   </typeAliases>
  </configuration>

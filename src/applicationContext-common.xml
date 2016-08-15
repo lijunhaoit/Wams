@@ -17,8 +17,8 @@
 	
     <!-- 配置DataSource数据源 -->  
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-       <property name="driverClassName" value="com.mysql.jdbc.Driver"/>  
-       <property name="url" value="jdbc:mysql://192.168.182.128:3306/test"/>  
+       <property name="driverClassName" value="org.mariadb.jdbc.Driver"/>  
+       <property name="url" value="jdbc:mysql://192.168.209.128:3306/wams"/>  
        <property name="username" value="root"/>  
        <property name="password" value="123456"/> 
     </bean>
@@ -30,13 +30,13 @@
        <property name="mapperLocations">  
             <list>  
             <!-- 表示在com.hoo.resultmap包或以下所有目录中，以-resultmap.xml结尾所有文件 --> 
-             <value> classpath:com/huawei/wams/core/mapper/*.xml</value > 
+             <value> classpath:com/jihan/wams/core/mapper/*.xml</value > 
             </list>       
        </property>
     </bean>
     <!-- 通过扫描的模式，扫描目录在com/hoo/mapper目录下，所有的mapper都继承SqlMapper接口的接口， 这样一个bean就可以了 -->  
     <bean  class="org.mybatis.spring.annotation.MapperScannerPostProcessor">  
-       <property name="basePackage" value="com.huawei.wams.core"/>  
+       <property name="basePackage" value="com.jihan.wams.core"/>  
        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />  
     </bean>
    
